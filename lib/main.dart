@@ -43,9 +43,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
-        title: Text(widget.title),
+       title: Text("Login UI"),
+       centerTitle: true,
+       flexibleSpace: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [Colors.red,Colors.orange],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          ),
+        ),
+       ),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -73,15 +80,15 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Center(
                 child: Padding(
-                  padding: EdgeInsets.only(top: 105),
+                  padding: EdgeInsets.only(top: 70),
                   child: Container(
                     width: double.infinity,
                     height: 520,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(70),
-                        topRight: Radius.circular(70),
+                        topLeft: Radius.circular(60),
+                        topRight: Radius.circular(60),
                       ),
                     ),
                     child: Column(
@@ -115,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
 
-                        SizedBox(height: 25),
+                        SizedBox(height:2),
 
                         Center(
                           child: Padding(
@@ -149,19 +156,18 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height:10),
 
                         TextButton(
                           onPressed: () {
                             print("Forget Password");
                           },
                           child: Text(
-                            "Forget Password",
-                            style: TextStyle(fontSize: 20),
+                            "Forget Password?",
                           ),
                         ),
 
-                        SizedBox(height: 25),
+                        SizedBox(height:10),
 
                         ElevatedButton(
                           onPressed: () {
@@ -179,6 +185,59 @@ class _MyHomePageState extends State<MyHomePage> {
                             "Login",
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
+                        ),
+
+                        SizedBox(height:10),
+                        Text(
+                          "Continue with social media"
+                        ),
+
+                        SizedBox(height: 10),
+
+                        Padding(
+                          padding: const EdgeInsets.all(15),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ElevatedButton(onPressed: (){
+                                
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                              ),
+                               child: Text(
+                                "LinkedIn",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                               ),
+                               ),
+                          
+                               ElevatedButton(onPressed: (){},
+                               style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.black,
+                               ),
+                                child: Text(
+                                  "Github",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                                ),
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(height:10),
+                        TextButton(onPressed: (){}, 
+                        child:Text(
+                          "Dont't have an account? Sign Up",
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        ),
                         ),
                       ],
                     ),
