@@ -30,6 +30,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -44,10 +47,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body:SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Container(
           color: Colors.deepOrange,
-        
+
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -58,9 +61,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(color: Colors.white, fontSize: 30),
                 ),
               ),
-        
+
               SizedBox(height: 5),
-        
+
               Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: Text(
@@ -86,17 +89,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Center(
                           child: Padding(
-                            padding:EdgeInsets.all(11),
+                            padding: EdgeInsets.all(11),
                             child: TextField(
+                              controller: emailController,
+                              keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
-                                prefixIcon: Icon(Icons.email, color: Colors.amber),
+                                prefixIcon: Icon(
+                                  Icons.email,
+                                  color: Colors.amber,
+                                ),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20),
-                                  borderSide: BorderSide(
-                                    color: Colors.black,
-                                  ),
+                                  borderSide: BorderSide(color: Colors.black),
                                 ),
-                                hintText: "Enter Your Email",
+                                hintText: "Enter Email or Phone",
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(11),
                                   borderSide: BorderSide(
@@ -108,17 +114,19 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
-        
+
                         SizedBox(height: 25),
-        
+
                         Center(
                           child: Padding(
                             padding: const EdgeInsets.all(11),
                             child: TextField(
+                              controller: passwordController,
                               obscureText: true,
+                              keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
                                 hintText: "Enter Your password here",
-                                 suffixIcon: IconButton(
+                                suffixIcon: IconButton(
                                   onPressed: () {},
                                   icon: Icon(Icons.visibility_off),
                                 ),
@@ -128,25 +136,22 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20),
-                                  borderSide: BorderSide(
-                                    color: Colors.black,
-                                  ),
+                                  borderSide: BorderSide(color: Colors.black),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(11),
                                   borderSide: BorderSide(
-                                    color: Colors.blue,
+                                    color: Colors.deepOrange,
                                     width: 2,
                                   ),
                                 ),
-                               
                               ),
                             ),
                           ),
                         ),
-                        SizedBox(height: 25),
-        
-                        ElevatedButton(
+                        SizedBox(height: 20),
+
+                        TextButton(
                           onPressed: () {
                             print("Forget Password");
                           },
@@ -155,22 +160,24 @@ class _MyHomePageState extends State<MyHomePage> {
                             style: TextStyle(fontSize: 20),
                           ),
                         ),
-        
+
                         SizedBox(height: 25),
-        
+
                         ElevatedButton(
                           onPressed: () {
-                            print("SuccessFull Login");
+                            String email = emailController.text;
+
+                            String password = passwordController.text;
+
+                            print("Your Email is = $email");
+                            print("Your Password is = $password");
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
                           ),
                           child: Text(
                             "Login",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                            ),
+                            style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
                         ),
                       ],
