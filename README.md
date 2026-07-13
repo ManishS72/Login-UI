@@ -1,17 +1,23 @@
-# flutter_login_ui
+# Flutter Login UI
 
-A new Flutter project.
+A simple and responsive Login UI built with Flutter.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- 📧 Email or Phone Login
+- 🔒 Password Field (Hidden)
+- 👁️ Show/Hide Password Icon
+- 🔑 Forgot Password Button
+- 🔵 LinkedIn Login Button
+- ⚫ GitHub Login Button
+- 📱 Responsive UI
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshot
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+![Login UI](screenshots/login_page.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+
+- Flutter
+- Dart
+- Material Design
