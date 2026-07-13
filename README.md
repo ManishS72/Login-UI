@@ -1,24 +1,22 @@
-# Flutter Login UI
+# 📱 Flutter Login UI
 
-A simple and responsive Login UI built with Flutter.
-
-## ✨ Features
-
-- 📧 Email or Phone Login
-- 🔒 Password Field (Hidden)
-- 👁️ Show/Hide Password Icon
-- 🔑 Forgot Password Button
-- 🔵 Social Login Buttons
-- 📱 Responsive UI
+A simple Flutter Login UI built with Flutter.
 
 ## 📸 Screenshot
 
 <p align="center">
-  <img src="screenshots/login_page.png" alt="Flutter Login UI" width="300"/>
+  <img src="./screenshots/login_page.png.png" width="280"/>
 </p>
+
+## ✨ Features
+
+- 📧 Email/Phone Login
+- 🔒 Hidden Password
+- 👁️ Show/Hide Password
+- 🔑 Forgot Password
+- 🌐 Social Login
 
 ## 🛠️ Tech Stack
 
 - Flutter
 - Dart
-- Material Design
