@@ -14,7 +14,7 @@ A simple and responsive Login UI built with Flutter.
 
 ## Screenshot
 
-![Login UI](screenshots/login_page.png)
+![Login UI](screenshots/login_page.png.png)
 
 ## Tech Stack
 
