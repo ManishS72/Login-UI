@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
 
-                        SizedBox(height:2),
+                        SizedBox(height:3),
 
                         Center(
                           child: Padding(
